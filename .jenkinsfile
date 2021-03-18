@@ -10,15 +10,13 @@ pipeline{
 			}
 		}
 		stage('Deploy'){
-			steps{
-				
+			steps{	
 				echo 'Deploying the code'
 			}
 		}
 		stage('Test'){
-			steps{
-				
-				sh "mvn test verify -Dcucumber.options="--tags '@addPlace'""
+			steps{	
+				sh "mvn test"
 			}
 		}
 		stage('Unit testing'){
