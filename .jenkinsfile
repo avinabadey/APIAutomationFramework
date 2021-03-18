@@ -1,0 +1,37 @@
+pipeline{
+	agent any
+	stages{
+		stage('Build'){
+			steps{
+				
+				git 'https://github.com/avinabadey/APIAutomationFramework.git'
+				
+				sh "mvn clean"
+			}
+		}
+		stage('Deploy'){
+			steps{
+				
+				echo 'Deploying the code'
+			}
+		}
+		stage('Test'){
+			steps{
+				
+				sh "mvn test verify -Dcucumber.options="--tags @addPlace""
+			}
+		}
+		stage('Unit testing'){
+			steps{
+				
+				sh "mvn compile"
+			}
+		}
+		stage('Release'){
+			steps{
+				
+				echo 'Releasing the project to Prod'
+			}
+		}
+	}
+}
