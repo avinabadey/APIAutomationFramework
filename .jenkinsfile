@@ -18,7 +18,7 @@ pipeline{
 		stage('Test'){
 			steps{
 				
-				sh "mvn test verify -Dcucumber.options="--tags @addPlace""
+				sh "mvn test verify -Dcucumber.options="--tags addPlace""
 			}
 		}
 		stage('Unit testing'){
