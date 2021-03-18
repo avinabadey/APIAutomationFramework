@@ -2,10 +2,7 @@ pipeline{
 	agent any
 	stages{
 		stage('Build'){
-			steps{
-				
-				git 'https://github.com/avinabadey/APIAutomationFramework.git'
-				
+			steps{		
 				sh "mvn clean"
 			}
 		}
