@@ -29,7 +29,7 @@ public class AddPlaceSteps {
 			prop = new Properties();
 			FileInputStream fis = null;
 			try {
-				fis = new FileInputStream("src\\test\\java\\BDD\\APITestFramework\\utilities\\env.properties");
+				fis = new FileInputStream("src/test/java/BDD/APITestFramework/utilities/env.properties");
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
